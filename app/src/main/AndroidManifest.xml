@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tailwebs.aadharindia">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".AadhaarApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_aadhar_india_app"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".loginandforgot.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginandforgot.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginandforgot.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginandforgot.ForgotPasswordSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <activity
+            android:name=".center.searchinmap.SearchVillageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.CenterShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aadharscan.AadharScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.CreateNewCenterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".aadharscan.AadharScanSampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.CenterConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.CenterListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.custom.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWithActionBar" />
+        <activity
+            android:name=".utils.custom.multipleimageupload.ImagesSelectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aadharscan.customscancodeutils.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
+        <activity
+            android:name=".aadharscan.ContinuousCaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.CreateCenterStartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.ApplicantDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.GroupMemberListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.AddNewMemberScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberScanResponseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.AddCustomerDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".member.applicant.CreditCheckReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.EMICalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.LoanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".member.applicant.ApplicantDocumentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".member.applicant.SelectLanguageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".member.coapplicant.CoApplicantDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".member.coapplicant.CoApplicantActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".member.coapplicant.CoApplicantDocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.coapplicant.CoApplicantFamilyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.EditCustomerDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.coapplicant.AddNewCoApplicantScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.coapplicant.EditCoApplicantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.CashIncomeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.FamilyMembersListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.EditEMICalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.applicant.EditLoanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.MemberInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.expenditure.ExpenditureDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.expenditure.AddExpenditureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.declaration.DeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.rating.RatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.AlternateIncomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.expenditure.OutsideBorrowingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.SelectPrimaryJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.EditAlternateIncomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.cashincome.EditMemberInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.custom.newmultipleimageupload.activity.UserCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.custom.newmultipleimageupload.activity.ImageSwitcherActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageGroupNoActionBar" />
+        <activity
+            android:name="com.tailwebs.baseproject.newimageupload.activity.AlbumActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageGroupBaseTheme" />
+        <activity
+            android:name=".utils.custom.newmultipleimageupload.activity.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".center.ListOfGroupsInCityCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseInfoCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HousePhotosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.PersonalInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseVisitApplicantDocActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseVisitCoApplicantDocActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseInfoEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.PersonalInformationEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseVisitMemberListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.SignaturePadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".housevisit.HouseVisitDeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.SignatureConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".housevisit.HouseVisitRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.dashboard.TaskDashboardActivity"
+            android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.NewGroupTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.creategroup.CreateGroupTaskDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.creategroup.CreateGroupViewMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.housevisit.HouseVisitTaskDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.housevisit.HouseVisitGroupReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.PostApprovalTaskDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.GroupDocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.IndividualDocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.IndividualMemberDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.ShowOtherChargesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.PostDocumentsDeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.PDFViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".postapproval.PostApprovalSignatureConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.InsuranceFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.NewTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.declaration.FormFillingSignaturePadActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".member.declaration.FormFillingSignatureConfirmationActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".FireIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FireMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".inappbrowser.InAppBrowserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".member.SelectGroupLeaderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.CollectionTaskDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.group.GroupOverViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.group.GroupCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.group.GroupCollectionConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.member.MemberOverviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.member.CashCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.member.PenaltyDiscountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.CollectionRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.member.GroupMembersOverVIewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.tasks.collection.member.CashCollectionConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.custom.horizontalfullscreen.ImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".member.applicant.EditCreditCheckReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.declaration.FormFillingSignatureShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.PostApprovalSignatureShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.digio.in.esign2sdk.DigioEsignActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.ViewLoanAgreementPDFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utils.custom.horizontalfullscreen.ImagePreviewSingleImageWithEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.PostApprovalSignatureActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".housevisit.SignatureShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".postapproval.AddContactsDigioActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".home.CustomTaskDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.AddEditNotesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".postapproval.ApplicantSignatureActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".postapproval.ApplicantSignatureConfirmationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".postapproval.CoApplicantSignatureActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".postapproval.CoApplicantSignatureConfirmationActivity"
+            android:screenOrientation="portrait" />
+
+
+        <receiver
+            android:name=".geotracking.TrackerBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name=".TrackerActivity.ALARM_ACTION_START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name=".TrackerActivity.ALARM_ACTION_END" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".geotracking.TrackerTaskService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".geotracking.TrackerService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".BaseActivity"></activity>
+    </application>
+
+</manifest>

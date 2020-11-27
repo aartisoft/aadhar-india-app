@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".postapproval.GroupDocumentsActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+                <!--//group pic-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_group_photo"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="12dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/group_photo_upload_image"
+                        android:src="@drawable/group_photo"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/group_photo_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyEditTextTitle"
+                    android:textColor="@color/errorColor"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/group_photo_status_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+                <!--nach form -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_nach_form"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/nach_form_page_image"
+                        android:src="@drawable/nach_photo"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/nach_form_page_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/nach_form_status_tv"
+                    android:visibility="gone"
+
+                    />
+
+
+
+                <!--other documents-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_other_documents"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/other_documents_grid"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/others_documents_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentBottom="true"
+                android:text="@string/action_continue"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
+                style="@style/MyBlueButton"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context=".center.CreateCenterStartActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bordered_bg"
+        android:layout_margin="24dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/select_center_layout"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_gravity="left"
+            android:id="@+id/select_center_tv"
+            android:drawableRight="@drawable/green_tick"
+            android:text="@string/hint_select_center"
+            style="@style/MyFormHeadingTextView"
+
+            />
+
+
+            </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyFormHeadingMessageTextView"
+            android:layout_gravity="left"
+            android:text="@string/hint_user_phone"
+            android:id="@+id/center_person_tv"
+
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyFormHeadingMessageTextView"
+            android:layout_gravity="left"
+            android:text="@string/hint_address_line_1"
+            android:id="@+id/center_person_address_tv"
+            />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider_view">
+        </include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/add_members_layout"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/add_members_tv"
+                android:drawableRight="@drawable/radio_button_on"
+                android:text="@string/hint_add_members"
+                style="@style/MyFormHeadingTextView"
+
+                />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider_view">
+        </include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/house_visit_layout"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:id="@+id/house_visit_tv"
+                android:drawableRight="@drawable/radio_button_on"
+                android:text="@string/hint_house_visit"
+                style="@style/MyFormHeadingTextView"
+
+                />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider_view">
+        </include>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".housevisit.PersonalInformationActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <!--//1st card-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_upcoming_events"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:layout_marginBottom="8dp"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+                    >
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/upcoming_events_list_view"
+                        android:scrollbars="none"
+                        >
+
+                    </ListView>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_past_events"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:layout_marginBottom="8dp"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+                    >
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/past_events_list_view"
+                        android:scrollbars="none"
+                        >
+
+                    </ListView>
+
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/action_continue"
+                    android:layout_marginBottom="48dp"
+                    style="@style/MyBlueButton"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

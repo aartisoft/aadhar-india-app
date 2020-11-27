@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.cashincome.SelectPrimaryJobActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_padding"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bordered_bg"
+            android:orientation="vertical"
+            android:layout_marginBottom="88dp"
+            >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+                <requestFocus />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:helperTextEnabled="false"
+                app:hintEnabled="false"
+                android:singleLine="true"
+              >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/input_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="@string/hint_search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    style="@style/MyEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_back_stack_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:text="@string/action_continue"
+            android:enabled="false"
+            style="@style/MyDisabledButton"
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

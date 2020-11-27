@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.expenditure.AddExpenditureActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+                    >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_rent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_rent"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_rent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_food"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_food"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_education"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_education"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_education"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_medical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_medical"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_medical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_travel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_travel"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_travel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_clothing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_clothing"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_clothing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_other"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_other"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/action_continue"
+                    android:layout_marginBottom="48dp"
+                    style="@style/MyBlueButton"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

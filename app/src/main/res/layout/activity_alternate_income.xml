@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.cashincome.AlternateIncomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="76dp"
+        >
+
+        <include layout="@layout/custom_action_bar"
+            android:id="@+id/action_bar_layout"
+            >
+
+        </include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_bg"
+            android:layout_margin="24dp"
+            android:paddingLeft="@dimen/margin_padding"
+            android:paddingTop="16dp"
+
+            >
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_alternate_income"
+                style="@style/MyEditTextTitle"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                >
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/yes_tv"
+                    android:layout_marginRight="24dp"
+                    android:text="@string/hint_yes"
+                    android:gravity="center"
+                    style="@style/MyRadioNotSelected"
+                    />
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:id="@+id/no_tv"
+                    android:text="@string/hint_no"
+                    android:gravity="center"
+                    style="@style/MyRadioNotSelected"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/duplicating_layout"
+                android:visibility="gone"
+
+                >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyBlueTextView"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:id="@+id/add_alternate_income_tv"
+                android:text="@string/hint_another_alternate_income"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                style="@style/MyBlueButton"
+                android:id="@+id/continue_button"
+                android:text="@string/action_continue"
+                />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

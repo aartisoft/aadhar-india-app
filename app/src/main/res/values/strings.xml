@@ -1,0 +1,536 @@
+<resources>
+    <string name="app_name">Aadhaar India</string>
+
+    <string name="action_ok">OK</string>
+
+    <!--login-->
+    <string name="action_apply_for_job">Apply for a Job </string>
+    <string name="hint_user_id">User ID</string>
+    <string name="hint_password">Password</string>
+    <string name="action_forgot_password">Forgot Password</string>
+    <string name="action_log_in">Log In</string>
+
+    <string name="hint_reset_password">Reset your Password</string>
+    <string name="hint_forgot_password_login"><u>Forgot Password</u></string>
+    <string name="hint_new_password">New Password - 6 Digit</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="action_next">Next</string>
+    <string name="hint_forgot_password">Forgot Password? Enter Mobile number</string>
+    <string name="action_send_link">Send Link</string>
+    <string name="hint_registered_mobile_number">Registered Mobile Number</string>
+    <string name="hint_password_reset_link">Password Resent Link Sent</string>
+    <string name="hint_password_reset_message_1">We\’ve sent you a password reset link on your
+        registered mobile number +91 9182381231. </string>
+    <string name="hint_password_reset_message_2">Click on the link to Reset a new password.
+        Once the password is set, try logging in again.  </string>
+    <string name="action_back_to_login">Back to Login</string>
+    <string name="pre_mobile">+91</string>
+    <string name="hint_wrong_number">Wrong Number? <u>Change Number</u></string>
+    <string name="hint_did_not_receive">Didn\'t Receive Link? <u>Resend Link</u></string>
+
+    <string name="hint_search_village">Search</string>
+    <string name="action_continue">Continue</string>
+
+    <string name="action_clear">Clear</string>
+    <string name="action_save">Save</string>
+
+
+    <string name="hint_get_members_in_center"><u>Get groups in this center</u></string>
+    <string name="hint_go_to_house_visit"><u>Go to House Visit</u></string>
+    <string name="hint_house_visit">House Visit</string>
+
+
+    <string name="action_logout">Logout</string>
+    <string name="action_go_to_center_creation">Create Center</string>
+
+
+    <!--errors-->
+    <string name="error_invalid_email_id">Invalid email address</string>
+    <string name="error_invalid_pwd">Password should be of min 6 digits</string>
+    <string name="error_invalid_aadhar">Aadhaar no should be of min 12 digits</string>
+    <string name="error_invalid_address">Address should be of min 10 characters</string>
+    <string name="error_invalid_zip_code">Zip code contains 6 numbers</string>
+    <string name="error_invalid_otp">OTP contains 6 numbers</string>
+    <string name="error_invalid_mobile">Not Valid number</string>
+    <string name="error_invalid_pan">Not Valid PAN number</string>
+    <string name="field_required">Field Required</string>
+    <string name="error_api_failure">Something went wrong, please try after sometime or contact admin</string>
+    <string name="error_no_internet">No Internet connection</string>
+    <string name="loading">Loading please wait...</string>
+    <string name="error_invalid_c_pwd">Password and Confirm password don\'t match</string>
+    <string name="hint_document_rejected">Document Rejected.Upload Again.</string>
+    <string name="hint_document_missing">Document Missing. Upload Again.</string>
+
+    <!--profile-->
+    <string name="hint_user_phone">Phone Number</string>
+    <string name="hint_user_aadhar">Aadhaar Number</string>
+    <string name="hint_user_dob">Date of Birth</string>
+    <string name="hint_user_gender">Gender</string>
+    <string name="hint_user_center_address">Center Address</string>
+
+
+    <!--center-->
+    <string name="hint_create_new_center">Create New Center</string>
+    <string name="hint_create_contact_person">Center Contact Person</string>
+    <string name="hint_aadhar_number">Aadhaar Number</string>
+    <string name="hint_contact_person">Contact Person</string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="hint_day">Day</string>
+    <string name="hint_month">Month</string>
+    <string name="hint_year">Year</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_male">Male</string>
+    <string name="hint_female">Female</string>
+    <string name="hint_aadhar_co">Care of in  Aadhaar Card</string>
+    <string name="hint_mobile_number">Mobile Number</string>
+    <string name="hint_relation">Relation as on Aadhaar Card</string>
+
+
+    <string name="hint_center_address">Center Address</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_address_line_1">Address</string>
+    <string name="hint_address_line_2">Address Line 2 (Optional)</string>
+    <string name="hint_city">Village / Town / City</string>
+    <string name="hint_pin_code">Pin Code</string>
+    <string name="hint_district">District</string>
+    <string name="hint_state">State</string>
+    <string name="hint_task_number_of_members">Number of Members</string>
+    <string name="hint_task_center_detail">Center Address</string>
+    <string name="hint_relation_as_on_aadhar">Relation as on Aadhaar Card</string>
+
+
+    <string name="hint_center_photos">Center Photos</string>
+    <string name="hint_contact_person_photo">Contact Person Photo</string>
+
+    <string name="action_submit">Submit</string>
+
+    <!--scan-->
+    <string name="hint_new_center_scan">New Center in</string>
+    <string name="hint_aadhar_scan">Aadhaar Number - Center Contact Person</string>
+    <string name="action_create_group">Create Group in this Center</string>
+    <string name="hint_create">Create</string>
+
+    <string name="action_create_center">Create Center</string>
+
+    <!--crop image-->
+    <string name="crop_image_activity_title">Crop Image</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+
+    <!--multiple image upload-->
+
+    <string name="selector_folder_all">All Images</string>
+    <string name="selector_caption">Select Images</string>
+    <!--http://stackoverflow.com/questions/17502824/whats-wrong-with-this-format-string-->
+    <string name="selector_action_done">Done (%1$d/%2$d)</string>
+    <string name="selector_preview">Preview</string>
+
+    <string name="selector_reach_max_image_hint">You have selected %d images already!</string>
+    <string name="tip_take_photo">Take Photo</string>
+    <string name="msg_no_camera">Can\'t Launch Camera!</string>
+    <string name="camera_temp_file_error">Temp File Error!</string>
+
+    <string name="selector_permission_error">Permission rejected，failed to work properly！</string>
+
+
+    <string name="action_camera">Camera</string>
+    <string name="action_gallery">Gallery</string>
+    <string name="title_choose">Choose</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="back_button">Back</string>
+    <string name="done_button">Done</string>
+
+
+    <!--center-->
+
+    <string name="hint_select_center">Select Center</string>
+    <string name="hint_add_members">Add Members</string>
+
+
+    <!--zxing-->
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="zxing_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+
+
+    <!--member details-->
+
+
+    <string name="hint_applicant">Applicant</string>
+    <string name="hint_co_applicant">Co-Applicant &amp; Family</string>
+    <string name="hint_income">Income</string>
+    <string name="hint_expenses">Expenses</string>
+    <string name="hint_signing">Signing</string>
+
+    <!--applicant details-->
+
+    <string name="hint_customer_details">Customer Details</string>
+    <string name="hint_credit_check_report">Credit Check Report</string>
+    <string name="hint_emi_calculator">EMI Calculator</string>
+    <string name="hint_loan_details">Loan Details</string>
+    <string name="hint_documents">Documents</string>
+
+    <string name="hint_create_new_customer">Add New Customer</string>
+    <string name="hint_new_member_scan">New Member in</string>
+
+
+    <string name="hint_loan_status">Loan Status</string>
+    <string name="hint_outstanding_balance">Outstanding Balance</string>
+    <string name="hint_overdue_amount">Overdue Amount</string>
+    <string name="hint_customer_rating">Customer Rating</string>
+    <string name="hint_rejection_reason">Reason</string>
+    <string name="hint_reason">Reason</string>
+    <string name="action_proceed">Proceed</string>
+    <string name="action_reject_applicant"><u>Reject Applicant</u></string>
+    <string name="hint_name">Name</string>
+    <string name="hint_rating">Rating</string>
+
+    <string name="hint_pan_no">PAN Number</string>
+    <string name="hint_voter_id">Voter ID</string>
+
+
+    <string name="hint_customer_address">Customer Address</string>
+    <string name="hint_alternate_address">Same as Aadhaar Card? </string>
+
+    <string name="hint_past_due_accounts">Past Due Accounts</string>
+    <string name="hint_past_due_amount">Past Due Amount</string>
+    <string name="hint_written_off_amount">Written Off Amount</string>
+    <string name="hint_credit_score">Credit Score</string>
+    <string name="hint_dpd_count">DPD Count</string>
+    <string name="hint_latest_dpd_count">Latest DPD Count</string>
+
+    <string name="hint_credit_profile_satisfactory">Credit Profile is satisfactory</string>
+    <string name="hint_credit_profile_unsatisfactory">Credit Profile is unsatisfactory</string>
+    <string name="action_reject_application">Reject Application</string>
+
+
+    <string name="hint_repeat_customer">Repeat Customer</string>
+    <string name="hint_loan_cycle">Loan Cycle</string>
+
+    <string name="hint_loan_amount">Loan Amount</string>
+    <string name="hint_loan_tenure">Loan Tenure(months)</string>
+    <string name="hint_approx_emi_amount">Approx. EMI Amount</string>
+    <string name="action_apply_loan">Apply Loan</string>
+
+
+    <string name="hint_loan_reason">Loan Reason</string>
+    <string name="hint_select_reason">Select Reason</string>
+    <string name="hint_loan_description">Loan Description</string>
+
+    <string name="hint_contact">Contact</string>
+    <string name="hint_contact_details">Contact Details</string>
+    <string name="hint_primary_number">Mobile Number 1</string>
+    <string name="hint_secondary_number">Mobile Number 2</string>
+    <string name="hint_land_line">Landline Number</string>
+
+
+    <string name="hint_about">About</string>
+    <string name="hint_marital_status">Marital Status</string>
+    <string name="hint_caste">Caste</string>
+    <string name="hint_religion">Religion</string>
+    <string name="hint_ration_card_type">Ration Card Type</string>
+    <string name="hint_preferred_language">Preferred Language</string>
+
+
+    <string name="hint_applicant_profile_pic">Applicant Profile Pic</string>
+    <string name="hint_coapplicant_profile_pic">Co-Applicant Profile Pic</string>
+    <string name="hint_bank_detail">Bank Detail(First Page)</string>
+    <string name="hint_document_not_available"> - Document not Available</string>
+    <string name="hint_one_year_bank_statement">1 Year Bank Statement</string>
+    <string name="hint_aadhar_card_front">Aadhaar Card Front</string>
+    <string name="hint_aadhar_card_back">Aadhar Card Back</string>
+    <string name="hint_secondary_id">Secondary ID</string>
+    <string name="hint_secondary_id_not_available"> - Secondary ID Not Available</string>
+    <string name="hint_other_loan_cards">Other Loan Cards</string>
+    <string name="hint_other_documents">Other Documents</string>
+    <string name="hint_address_proof">Address Proof</string>
+
+    <string name="hint_restart_process">Do you want to restart process?  </string>
+
+    <string name="action_group_cpf">Submit Group CPF</string>
+    <string name="hint_search">Search</string>
+    <string name="hint_document_uploaded">Document Uploaded</string>
+    <string name="hint_marked_not_available">Document Marked Not Available</string>
+    <string name="hint_document_approved">Document Approved</string>
+
+    <!--co applicant-->
+
+    <string name="hint_co_applicant_">Co-Applicant</string>
+    <string name="hint_co_applicant_documents">Co-Applicant Documents</string>
+    <string name="hint_co_applicant_family">Family</string>
+
+    <string name="hint_father_name">Father Name</string>
+    <string name="hint_mother_name">Mother Name</string>
+    <string name="hint_father_in_law_name">Father in-law Name</string>
+    <string name="hint_mother_in_law_name">Mother in-law Name</string>
+    <string name="hint_relation_with_applicant">Relation with Applicant</string>
+    <string name="hint_co_applicant_address">Co-Applicant Address</string>
+    <string name="hint_current_address">Current Address</string>
+
+
+    <string name="hint_family_income">Family Income</string>
+    <string name="hint_family_member_income">Family Member &amp; Income</string>
+
+
+    <string name="hint_add_new_member">Add New Member</string>
+    <string name="hint_add_new_family_member">Add Family Member</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_relationship_with_applicant">Relationship with Applicant</string>
+    <string name="hint_health">Health</string>
+    <string name="hint_education">Education</string>
+    <string name="hint_type_of_school">Type of School</string>
+    <string name="hint_class">Class</string>
+    <string name="hint_job">Job</string>
+    <string name="hint_income_amount">Income Amount</string>
+    <string name="hint_cash_flow">Cash Flow</string>
+    <string name="hint_fixed">Fixed</string>
+    <string name="hint_variable">Variable</string>
+    <string name="hint_primary_job">Job</string>
+    <string name="hint_add_secondary_job">+ Add Job</string>
+    <string name="hint_add_member">Add Member</string>
+    <string name="hint_update_member">Update Member</string>
+    <string name="hint_remove_job">-Remove this Job</string>
+
+    <string name="hint_family_expenditure">Family Expenditure</string>
+    <string name="hint_outside_borrowing">Outside Borrowing</string>
+
+    <string name="hint_confirm_sign">Confirm &amp; eSign</string>
+
+    <string name="hint_rent">Rent</string>
+    <string name="hint_food">Food</string>
+    <string name="hint_medical">Medical</string>
+    <string name="hint_travel">Travel</string>
+    <string name="hint_clothing">Clothing</string>
+    <string name="hint_other">Other</string>
+
+
+    <string name="hint_esign_cpf">eSign CPF</string>
+    <string name="hint_declaration">Declaration</string>
+
+    <string name="hint_rate_this_customer">Rate this customer</string>
+    <string name="hint_how_would_you_like">How would you like to rate this customer?</string>
+    <string name="action_finish">Finish</string>
+
+
+    <string name="hint_yes">Yes</string>
+    <string name="hint_no">No</string>
+    <string name="hint_alternate_income">Alternate Income</string>
+
+    <string name="hint_add_new_loan">Add New Loan</string>
+
+    <string name="hint_source">Source</string>
+    <string name="hint_remove_this_source">- Remove this Source</string>
+    <string name="hint_another_alternate_income">+ Add Another Alternate Income</string>
+
+    <string name="hint_is_person_studying">Is person studying ?</string>
+    <string name="hint_does_member_have_income">Does member have an Income ?</string>
+
+
+    <!--new image upload-->
+
+
+    <string name="image_group_intent_action">com.loopeer.android.librarys.imagegroupview</string>
+    <string name="image_group_intent_switcher_uri">imagegroupview://switcher</string>
+    <string name="image_group_intent_album_uri">imagegroupview://album</string>
+
+    <string name="select_images">Album</string>
+    <string name="take_photo">Camera</string>
+    <string name="album_all">All</string>
+    <string name="action_submit_string">Submit(%1$d/%2$d)</string>
+    <string name="action_submit_string_no_max">Submit(%1$d)</string>
+    <string name="action_delete_delete_dialog">Delete this Photo?</string>
+    <string name="action_button_delete">Delete</string>
+    <string name="select_max_photos">You have reached the maximum limit</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="camera_permission_setting_reject">Please set the permission in the app settings</string>
+    <string name="delete_item">Delete</string>
+
+
+    <string name="hint_member_present">Is the member present at home ?</string>
+    <string name="hint_house_information">House Information</string>
+    <string name="hint_personal_information">Personal Information</string>
+    <string name="hint_applicant_documents">Applicant Documents</string>
+    <string name="hint_house_co_applicant_documents">Co-Applicant Documents</string>
+    <string name="hint_house_photos">House Photos</string>
+
+
+    <!--House Information-->
+
+    <string name="hint_house_ownership">House Ownership</string>
+    <string name="hint_roof_structure">Roof Structure</string>
+    <string name="hint_wall_structure">Wall Structure</string>
+    <string name="hint_kitchen_type">Kitchen Type</string>
+    <string name="hint_toilet">Toilet</string>
+    <string name="hint_no_of_rooms">No of Rooms</string>
+    <string name="hint_stay_at_current_location">Stay at current location(yrs.)</string>
+    <string name="hint_married_yrs">Married Since (yrs.)</string>
+    <string name="hint_family_owned_agriculture">Family-Owned Agriculture Land (acres)</string>
+    <string name="hint_number_of_cattle">Number of Cattle</string>
+
+    <string name="hint_social_parameter">Social Parameter</string>
+    <string name="hint_select_following_owned_by_customer">Select the following owned by the customer</string>
+
+
+    <string name="hint_family_type">Family Type</string>
+    <string name="hint_family_type_joint">Joint</string>
+    <string name="hint_family_type_nuclear">Nuclear</string>
+    <string name="hint_no_of_members_in_family">Members in the family</string>
+    <string name="hint_how_many_ill_members">Ill members in the family?</string>
+    <string name="hint_how_many_dependent_members">Dependents in the family</string>
+    <string name="hint_how_manysmartphones">Smartphones in the family</string>
+
+
+    <string name="hint_upcoming_events">Upcoming Events</string>
+    <string name="hint_past_events">Past Events</string>
+    <string name="hint_notes">Notes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="hint_are_you_leaving">Are you sure you want to leave this page?</string>
+    <string name="hint_leave_page">LEAVE PAGE</string>
+    <string name="hint_stay_on_page">STAY ON PAGE</string>
+    <string name="hint_leave_page_title">Leave Page</string>
+
+
+    <string name="hint_cancel_task_title">Cancel Task?</string>
+    <string name="hint_complete_task_title">Complete Task?</string>
+    <string name="hint_negative_complete_task_title">Negative Complete Task?</string>
+    <string name="hint_remove_member_from_title">Remove Member from Group?</string>
+    <string name="hint_remove_member_from_message">Are you sure you want to remove this member from this group?</string>
+    <string name="hint_complete_message">Are you sure you want to mark this task complete?</string>
+    <string name="hint_negative_complete_message">Are you sure you want to mark this task negative complete?</string>
+    <string name="hint_cancel_task">Are you sure you want to cancel this task?</string>
+    <string name="title_activity_task_dashboard">TaskDashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--task dashboard-->
+
+    <string name="hint_add">Add</string>
+    <string name="hint_new_task">New Task</string>
+    <string name="hint_new_group_task">New Group</string>
+    <string name="hint_task">Task</string>
+    <string name="hint_name_optional">Name(Optional)</string>
+    <string name="hint_location">Location</string>
+    <string name="hint_date">Date</string>
+    <string name="action_save_task">Save Task</string>
+    <string name="action_task_create_group">Create Group</string>
+    <string name="action_task_view_members">View Members</string>
+
+    <string name="hint_hv_pending">Approval Pending</string>
+    <string name="hint_hv_completed">Member Approved</string>
+    <string name="hint_hc_rejected">Rejected</string>
+
+
+    <string name="hint_group_documents">Group Documents</string>
+    <string name="hint_individual_documents">Individual Documents</string>
+    <string name="hint_group_photo">Group Photo</string>
+    <string name="hint_nach_form">NACH Form - Group Leader</string>
+
+    <string name="hint_e_sign_documents">E-Sign Documents</string>
+    <string name="hint_insurance_docs">Insurance Docs</string>
+    <string name="hint_show_other_charges">Show Other Charges</string>
+    <string name="hint_loan">Loan</string>
+
+
+    <string name="hint_applicant_insurance_form">Applicant Insurance Form</string>
+    <string name="hint_applicant_health_declaration_form">Applicant Health Declaration Form</string>
+    <string name="hint_co_applicant_insurance_form">Co-Applicant Insurance Form</string>
+    <string name="hint_co_applicant_health_declaration_form">Co-Applicant Health Declaration Form</string>
+
+
+    <string name="hint_approved_loan">Approved Loan</string>
+    <string name="hint_processing_fees">Processing Fees + 18% GST</string>
+    <string name="hint_admin_charges">Admin Chargs. + 18% GST </string>
+    <string name="hint_insurance_amount">Insurance Amount (Applicant + Co-Applicant)</string>
+    <string name="hint_disbursal_amount">Final Disbursal Amount (Approved - total processing fees - total admin chrgs - Insurance Amount)</string>
+    <string name="hint_emi_amont">EMI Amount</string>
+    <string name="hint_first_emi_amount_indicative">1st EMI Amount (Indicative)</string>
+    <string name="hint_emi_collection_date">EMI Collection Date</string>
+    <string name="hint_interest_amount_indicative">Interest Amount (Indicative)</string>
+
+
+    <string name="hint_loan_agreement">Loan Agreement</string>
+    <string name="hint_sanction_letter">Sanction Letter</string>
+    <string name="hint_guarantors">Guarantors Joint Liability Agreement</string>
+
+
+    <string name="action_select">Select Center</string>
+
+
+    <!--Collection-->
+
+    <string name="hint_total_group_collection_today">Total Group Collection as of today</string>
+    <string name="hint_amount_collected">Amount Collected</string>
+    <string name="hint_pending_amount_collected">Pending Amount to be collected</string>
+    <string name="action_group_collection">Group Collection</string>
+    <string name="action_collect">Collect</string>
+    <string name="hint_collect_emi_by">Collect EMI by</string>
+    <string name="hint_mode_payment">Mode of Payment</string>
+    <string name="hint_transaction_id">Transaction ID</string>
+    <string name="hint_transaction_date">Transaction Date</string>
+    <string name="hint_pending_amount">Pending Amount</string>
+    <string name="hint_confirm">Confirm</string>
+    <string name="hint_penalty_amount">Penalty Amount</string>
+    <string name="hint_enter_discount">Enter Discount</string>
+    <string name="hint_total_balance_today">Total balance as of today</string>
+    <string name="hint_enter_cash_received">Enter Cash Received</string>
+    <string name="hint_cash_received">Cash Received</string>
+    <string name="hint_offer_discount">- Offer Discount </string>
+    <string name="hint_signature">Signature</string>
+
+
+    <string name="hint_applicant_signature">Applicant Signature Digio</string>
+    <string name="hint_co_applicant_signature">Co-applicant Signature Digio</string>
+    <string name="hint_applicant_signature_m">Applicant Signature Manual</string>
+    <string name="hint_co_applicant_signature_m">Co-applicant Signature Manual</string>
+
+    <string name="hint_equifax_message">The equifax report for this user was not found. Would you like to</string>
+    <string name="hint_equifax_title">Report not extracted</string>
+    <string name="hint_go_back">GO BACK</string>
+    <string name="hint_skip_continue">SKIP &amp; CONTINUE</string>
+
+
+    <string name="start_tracking">Start Tracking</string>
+    <string name="stop_tracking">Stop Tracking</string>
+    <string name="enter_transport_id">Enter transport ID</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="location_permissions_required">Location permissions are required for tracking
+        location. Please grant these permissions to continue.</string>
+    <string name="missing_inputs">Please enter a transport ID, email and password</string>
+    <string name="tracking">Tracking &#x2713;</string>
+    <string name="not_tracking">Not tracking &#x2718;</string>
+    <string name="connecting">Connecting &#8230;</string>
+    <string name="status">status</string>
+    <string name="location_permission_required">Location permission required.</string>
+    <string name="gps_required">Gps not enabled.</string>
+    <string name="ok">OK</string>
+    <string name="enable">Enable</string>
+    <string name="auth_failed">Firebase authentication failed</string>
+    <string name="confirm_stop">Do you really want to disable location tracking?</string>
+
+    <string name="firebase_path" translatable="false">raw-locations/</string>
+    <string name="prefs" translatable="false">aadhaar-india-prefs</string>
+    <string name="transport_id" translatable="false">transport_id</string>
+    <string name="email" translatable="false">email</string>
+    <string name="password" translatable="false">password</string>
+
+
+    <string name="api_key">AIzaSyAF-fimaPoyUvD851norTZ7nODFvxEdQ7g</string>
+    <string name="error">Google Api key is missing.</string>
+
+</resources>

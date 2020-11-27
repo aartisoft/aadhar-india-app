@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".housevisit.SignaturePadActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_bg"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="82dp"
+
+            >
+
+            <com.tailwebs.aadharindia.utils.custom.signaturepad.SignaturePad
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/signature_pad"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                >
+
+                <Button
+                    android:id="@+id/clear_button"
+                    android:layout_width="99dp"
+                    android:layout_height="40dp"
+                    android:text="@string/action_clear"
+                    android:enabled="false"
+                    android:layout_gravity="center|right"
+                    android:background="@drawable/bordered_bg_list_button"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="128dp"
+                >
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="99dp"
+                    android:layout_height="40dp"
+                    android:text="@string/action_save"
+                    android:enabled="false"
+                   style="@style/MyBlueButton"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

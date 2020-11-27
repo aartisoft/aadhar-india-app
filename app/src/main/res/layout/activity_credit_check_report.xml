@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.applicant.CreditCheckReportActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/credit_check_report_layout"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+                <!--outstanding balance -->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_outstanding_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_outstanding_balance"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_outstanding_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--past due accounts-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_past_due_accounts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:hint="@string/hint_past_due_accounts"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_past_due_accounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--past due amount-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_past_due_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_past_due_amount"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_past_due_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--written off amount-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_written_off_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_written_off_amount"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_written_off_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--dpd_count-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_dpd_count"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_dpd_count"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_dpd_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--latest dpd_count-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_latest_dpd_count"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_latest_dpd_count"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_latest_dpd_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--credit score-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_credit_score"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_credit_score"
+                    android:visibility="gone"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_credit_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:focusable="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            <!--//success box-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/success_message_box_layout"
+                android:background="@drawable/success_box_bg"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_padding"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                style="@style/MyFormHeadingTextView"
+                android:drawableLeft="@drawable/success_circle"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:id="@+id/success_box_tv"
+                android:text="@string/hint_credit_profile_satisfactory"
+                />
+            </FrameLayout>
+
+            <!--error box-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/error_box_bg"
+                android:id="@+id/error_message_box_layout"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_padding"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center"
+                    style="@style/MyFormHeadingTextView"
+                    android:drawableLeft="@drawable/error_circle"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:id="@+id/error_box_tv"
+                    android:text="@string/hint_credit_profile_unsatisfactory"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:orientation="horizontal"
+                android:layout_marginBottom="48dp"
+                android:id="@+id/button_layout"
+                android:visibility="gone"
+                android:weightSum="2"
+                >
+                <Button
+                    android:id="@+id/reject_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/action_reject_application"
+                    style="@style/MyBlueButton"
+                    android:textColor="@color/headingTextColor"
+                    android:background="@drawable/semi_left_button_bg"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/action_continue"
+                    style="@style/MyBlueButton"
+                    android:background="@drawable/semi_right_button_bg"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

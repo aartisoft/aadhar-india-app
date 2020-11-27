@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.applicant.LoanDetailsActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+            <!--//success box-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/success_message_box_layout"
+                android:background="@drawable/success_box_bg"
+                android:layout_marginBottom="@dimen/margin_padding"
+
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/value_amount_tenure_tv"
+                    style="@style/MyFormHeadingTextView"
+                    android:drawablePadding="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/emi_tv"
+                    style="@style/MyEditTextTitle"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_loan_details"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginBottom="8dp"
+
+                    />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+
+                    >
+
+
+                    <!--loan reason-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:text="@string/hint_loan_reason"
+                        style="@style/MyEditTextTitle"
+                        />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SpinnerTheme"
+                        android:id="@+id/loan_reason_spinner"/>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/loan_reason_spinner_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <!--loan reason old-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_loan_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:visibility="gone"
+                        android:hint="@string/hint_loan_reason"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <com.tailwebs.aadharindia.utils.custom.BetterSpinner
+                            android:id="@+id/input_loan_reason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_loan_reason_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_loan_reason"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:visibility="gone"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_loan_reason_other"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_loan_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_loan_description"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_loan_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <!--//2nd card-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_contact_details"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:layout_marginBottom="8dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_primary_number"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="12dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/pre_mobile"
+                                style="@style/MyEditTextTitle"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:id="@+id/pre_mobile"
+                                android:textSize="16sp"
+                                android:layout_marginRight="4dp"
+                                android:layout_alignParentLeft="true"
+
+                                />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_toRightOf="@+id/pre_mobile"
+                                android:id="@+id/input_layout_primary_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:errorTextAppearance="@style/errorEditTextAppearance"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                android:singleLine="true"
+                                >
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_primary_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/MyEditText"
+                                    android:imeOptions="actionDone"
+                                    android:maxLength="10"
+                                    android:inputType="numberSigned"
+                                    />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_secondary_number"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="12dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/pre_mobile"
+                                style="@style/MyEditTextTitle"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:id="@+id/sec_pre_mobile"
+                                android:textSize="16sp"
+                                android:layout_marginRight="4dp"
+                                android:layout_alignParentLeft="true"
+
+                                />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_toRightOf="@+id/sec_pre_mobile"
+                                android:id="@+id/input_layout_secondary_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:errorTextAppearance="@style/errorEditTextAppearance"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                android:singleLine="true"
+                                >
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_secondary_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/MyEditText"
+                                    android:imeOptions="actionDone"
+                                    android:maxLength="10"
+                                    android:inputType="numberSigned"
+                                    />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_land_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_land_line"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:visibility="gone"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_land_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberSigned"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_about"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:layout_marginBottom="8dp"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_marital_status"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="12dp"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/marital_status_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/marital_status_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_caste"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/caste_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/caste_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_religion"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/religion_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/religion_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_religion_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:visibility="gone"
+                        android:hint="@string/hint_religion"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_religion_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:visibility="gone"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_ration_card_type"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/ration_card_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/ration_card_error_tv"
+                        android:visibility="gone"
+
+                        />
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_ration_card_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:visibility="gone"
+                        android:hint="@string/hint_ration_card_type"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_ration_card_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_preferred_language"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_preferred_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_preferred_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/arrow_drop_down"
+                            android:focusable="false"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/action_continue"
+                    android:layout_marginBottom="48dp"
+                    style="@style/MyBlueButton"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

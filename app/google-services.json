@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1010729252406",
+    "firebase_url": "https://aadhaar-india-fin-ltd.firebaseio.com",
+    "project_id": "aadhaar-india-fin-ltd",
+    "storage_bucket": "aadhaar-india-fin-ltd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010729252406:android:f53af5374d6313ed",
+        "android_client_info": {
+          "package_name": "com.tailwebs.aadharindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010729252406-lnksm3g96la3m32jbc7osa6i5mgfddhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw35NdwkNWUsVwpI_nNmEXhnrJ9jvhA6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010729252406-lnksm3g96la3m32jbc7osa6i5mgfddhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

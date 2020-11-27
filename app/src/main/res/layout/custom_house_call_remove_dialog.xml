@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/margin_padding"
+    android:paddingRight="@dimen/margin_padding"
+    android:id="@+id/custom_password_dialog_layout"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyFormHeadingTextView"
+        android:text="Would you like to"
+        android:id="@+id/amount_tv"
+
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="Call Member"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/call_blue_pop_up"
+        android:id="@+id/call_member_tv"
+        style="@style/MyBluePopUpText"
+        />
+
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/remove_member_tv"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/remove_member"
+        android:text="Remove member from group"
+        style="@style/MyBluePopUpText"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

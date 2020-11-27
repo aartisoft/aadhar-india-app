@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.AddEditNotesActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/user_layout"
+                android:background="@drawable/bordered_bg_collection"
+                android:layout_margin="24dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    >
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyFormHeadingMessageTextView"
+                        android:layout_gravity="left"
+                        android:text="@string/hint_notes"
+
+                        />
+
+
+                    <android.support.design.widget.TextInputLayout
+
+                        android:id="@+id/input_layout_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:errorEnabled="true"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="140"
+                        app:helperTextEnabled="true"
+                        android:singleLine="false"
+                        >
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            android:singleLine="false"
+                            android:lines="10"
+                            android:gravity="top|left"
+                            android:minLines="3"
+                            android:maxLines="5"
+                            android:maxLength="140"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine"
+                            android:scrollbars="vertical"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:text="@string/action_save"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            style="@style/MyBlueButton"
+            />
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>

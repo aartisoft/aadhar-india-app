@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/primaryColor"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu"
+            android:id="@+id/back_button"
+            android:layout_centerVertical="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading_tv"
+            android:layout_toRightOf="@+id/back_button"
+            style="@style/MyBlueButton"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/three_dot"
+            android:layout_alignParentRight="true"
+            android:id="@+id/right_action_bar_button"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:padding="@dimen/inline_padding"
+
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

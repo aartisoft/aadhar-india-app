@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/margin_padding"
+    android:paddingRight="@dimen/margin_padding"
+    android:id="@+id/custom_password_dialog_layout"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/payment_type_toggle"
+        app:tbgFlow="true"
+
+        >
+
+
+
+        <!--<RadioButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:gravity="center"-->
+            <!--android:id="@+id/cash_rd"-->
+            <!--android:buttonTint="@color/primaryColor"-->
+        <!--android:textColor="@color/selector_text_radio_button"-->
+        <!--android:text="CASH"/>-->
+
+        <!--<RadioButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:gravity="left"-->
+            <!--android:id="@+id/aeps_rd"-->
+            <!--android:buttonTint="@color/primaryColor"-->
+        <!--android:textColor="@color/selector_text_radio_button"-->
+        <!--android:text="AEPS"/>-->
+
+        <!--<RadioButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="8dp"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:gravity="center"-->
+            <!--android:id="@+id/ach_rd"-->
+            <!--android:buttonTint="@color/primaryColor"-->
+        <!--android:textColor="@color/selector_text_radio_button"-->
+        <!--android:text="NACH"/>-->
+    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yes_button"
+            android:layout_alignParentRight="true"
+            style="@style/MyBluePopUpButton"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/yes_button"
+            style="@style/MyDisabledPopUpButton"
+            android:id="@+id/no_button"
+
+            />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

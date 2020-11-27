@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.tasks.collection.member.PenaltyDiscountActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:id="@+id/user_layout"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distance_tv"
+                    android:text="17 kms Away"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    style="@style/MyFormHeadingMessageTextView"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:id="@+id/city_tv"
+
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyFormHeadingTextView"
+                android:id="@+id/members_count_tv"
+
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MyFormHeadingMessageTextView"
+                android:id="@+id/co_tv"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/user_layout"
+            android:background="@drawable/bordered_bg_collection"
+            android:layout_margin="24dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:layout_gravity="left"
+                    android:text="@string/hint_penalty_amount"
+
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/penalty_amount_tv"
+                    android:text="0"
+                    style="@style/MyFormHeadingTextView"
+
+                    />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/layout_bg_stroke"
+
+
+                    ></FrameLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:layout_gravity="left"
+                    android:text="@string/hint_enter_discount"
+
+                    />
+
+
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:id="@+id/input_layout_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:errorEnabled="true"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberSigned"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:text="@string/hint_confirm"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            style="@style/MyBlueButton"
+
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    tools:context=".postapproval.IndividualMemberDetailActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bordered_bg"
+                android:layout_margin="24dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/profile_image_height"
+                    android:layout_height="@dimen/profile_image_height"
+                    android:layout_gravity="center"
+                    android:src="@drawable/userimg_placeholder"
+                    android:id="@+id/profile_image"
+                    android:layout_marginTop="12dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="@style/MyFormHeadingTextView"
+                    android:id="@+id/user_name"
+                    android:layout_marginTop="12dp"
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:layout_gravity="center"
+                    android:id="@+id/user_co"
+
+
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:layout_gravity="left"
+                    android:text="@string/hint_loan"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    style="@style/MyFormHeadingTextView"
+                    android:id="@+id/loan_details_tv"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+
+
+                    />
+
+
+
+
+                <include layout="@layout/common_divider_view">
+                </include>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyFormHeadingMessageTextView"
+                    android:layout_gravity="left"
+                    android:text="@string/hint_show_other_charges"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textColor="@color/primaryColor"
+                    android:id="@+id/show_other_charges_tv"
+                    android:layout_marginBottom="40dp"
+
+
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:id="@+id/e_sign_documents_iv"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/e_sign_documents_tv"
+                        android:text="@string/hint_e_sign_documents"
+                        android:enabled="false"
+                        style="@style/MyDisabledFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/common_divider_view">
+                </include>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/insurance_docs_iv"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/insurance_docs_tv"
+                        android:text="@string/hint_insurance_docs"
+                        android:enabled="false"
+                        style="@style/MyDisabledFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/common_divider_view"
+                    >
+                </include>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/signature_iv"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/signature_tv"
+                        android:text="@string/hint_signature"
+                        android:enabled="false"
+                        style="@style/MyDisabledFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/common_divider_view"
+                    >
+                </include>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"></FrameLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                style="@style/MyBlueButton"
+                android:id="@+id/continue_button"
+                android:text="@string/action_continue"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

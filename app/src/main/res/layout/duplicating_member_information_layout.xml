@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:id="@+id/duplicating_layout"
+
+    >
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_primary_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:hint="@string/hint_primary_job"
+        app:errorTextAppearance="@style/errorEditTextAppearance"
+        app:helperTextEnabled="true"
+        android:singleLine="true"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_primary_job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrow_drop_down"
+            android:focusable="false"
+            style="@style/MyEditText"
+            />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/primary_job_id"
+        android:visibility="gone"
+
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_income_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:hint="@string/hint_income_amount"
+        android:layout_marginTop="@dimen/form_margin_top"
+        app:errorTextAppearance="@style/errorEditTextAppearance"
+        app:helperTextEnabled="true"
+        android:singleLine="true"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_income_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            style="@style/MyEditText"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_cash_flow"
+        style="@style/MyEditTextTitle"
+        android:layout_marginTop="@dimen/form_margin_top"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:id="@+id/fixed_tv"
+            android:layout_marginRight="24dp"
+            android:text="@string/hint_fixed"
+            android:gravity="center"
+            style="@style/MyRadioNotSelected"
+            />
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:id="@+id/variable_tv"
+            android:text="@string/hint_variable"
+            android:gravity="center"
+            style="@style/MyRadioNotSelected"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        style="@style/MyEditTextTitle"
+        android:textColor="@color/errorColor"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/cash_flow_status_error_tv"
+        android:text="@string/field_required"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyBlueTextView"
+        android:paddingTop="@dimen/form_margin_top"
+        android:paddingBottom="@dimen/form_margin_top"
+        android:id="@+id/remove_this_job_tv"
+        android:text="@string/hint_remove_job"
+        android:onClick="onDelete"
+        />
+</LinearLayout>

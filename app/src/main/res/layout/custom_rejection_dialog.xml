@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/margin_padding"
+    android:paddingRight="@dimen/margin_padding"
+    android:id="@+id/custom_password_dialog_layout"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/hint_rejection_reason"
+        style="@style/MyEditTextTitle"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginTop="10dp"
+        app:errorTextAppearance="@style/errorEditTextAppearance"
+        app:helperTextEnabled="true"
+        android:layout_marginLeft="8dp"
+        android:singleLine="true"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="text"
+            style="@style/MyEditText"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+</LinearLayout>

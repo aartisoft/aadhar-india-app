@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_container_layout"
+    tools:context=".home.fragments.AllTasksFragment">
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+      <!---->
+
+        <!--&gt;-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/task_listing_recycler_view"
+        android:layout_width="match_parent"
+        android:padding="@dimen/margin_padding"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_task_detail" />
+
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+</android.support.v4.widget.SwipeRefreshLayout>

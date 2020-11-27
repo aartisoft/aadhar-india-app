@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".housevisit.HouseInfoCreateActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <!--1st card-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_house_ownership"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="12dp"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/house_ownership_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/house_ownership_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_stay_at_current_location"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/stay_current_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/stay_current_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_roof_structure"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/roof_structure_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/roof_structure_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_wall_structure"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/wall_structure_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/wall_structure_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_kitchen_type"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/kitchen_type_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/kitchen_type_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_toilet"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/toilet_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/toilet_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_no_of_rooms"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/no_of_rooms_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/no_of_rooms_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+                <!--//2nd card-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_social_parameter"
+                    style="@style/MyHeadingTextView"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:layout_marginBottom="8dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_select_following_owned_by_customer"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="12dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.multiselecttoggle.MultiSelectToggleGroup
+                        android:id="@+id/social_parameters_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="8dp"
+                        app:tbgChildSpacing="8dp">
+                    </com.tailwebs.aadharindia.utils.custom.multiselecttoggle.MultiSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/social_parameter_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                </LinearLayout>
+
+
+
+                <!--3rd card-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:padding="@dimen/margin_padding"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_number_of_cattle"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="12dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/no_of_cattle_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/no_of_cattle_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_family_owned_agriculture"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/family_owned_agriculture_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/family_owned_agriculture_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_married_yrs"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/married_since_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/married_since_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_family_type"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="36dp"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/family_type_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/family_type_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_no_of_members_in_family"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="12dp"
+                            />
+
+
+
+                            <android.support.design.widget.TextInputLayout
+
+                                android:id="@+id/input_layout_members_in_the_family"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:errorTextAppearance="@style/errorEditTextAppearance"
+                                app:errorEnabled="true"
+                                app:helperTextEnabled="true"
+                                android:singleLine="true"
+                                >
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_members_in_the_family"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/MyEditText"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="numberSigned"
+                                    />
+                            </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_how_many_ill_members"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/ill_members_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/ill_members_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_how_many_dependent_members"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="12dp"
+                            />
+
+
+
+                        <android.support.design.widget.TextInputLayout
+
+                            android:id="@+id/input_layout_dependent_members"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:errorEnabled="true"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            >
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_dependent_members"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/MyEditText"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberSigned"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_how_manysmartphones"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="12dp"
+                            />
+
+
+
+                        <android.support.design.widget.TextInputLayout
+
+                            android:id="@+id/input_layout_smartphones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:errorEnabled="true"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            >
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_smartphones"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/MyEditText"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberSigned"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/action_continue"
+                    android:layout_marginBottom="48dp"
+                    style="@style/MyBlueButton"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

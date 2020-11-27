@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".housevisit.HouseVisitApplicantDocActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+                <!--//profile pic-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_applicant_profile_pic"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="12dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/contact_person_upload_image"
+                        android:src="@drawable/profile_photo"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/profile_pic_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyEditTextTitle"
+                    android:textColor="@color/errorColor"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/profile_pic_status_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+                <!--bank detail-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_bank_detail"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/bank_detail_first_page_image"
+                        android:src="@drawable/bank_detail"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/bank_detail_first_page_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/bank_detail_status_tv"
+                    android:visibility="gone"
+
+                    />
+                <!--one year bank statement-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_one_year_bank_statement"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/oneYearBankLayout"
+                    >
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/one_year_bank_statement_grid"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:id="@+id/one_year_bank_statement_status_tv"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+
+                    />
+
+                <!--Aadhar card front-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_aadhar_card_front"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/aadhar_card_front_image"
+                        android:src="@drawable/aadhar_front"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/aadhar_card_front_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/aadhar_card_front_status_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+
+                    />
+
+                <!--aadhar card back-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_aadhar_card_back"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/aadhar_card_back_image"
+                        android:src="@drawable/aadhar_back"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/aadhar_card_back_progress_bar"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:id="@+id/aadhar_card_back_status_tv"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    />
+
+
+                <!--secondary id -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/hint_secondary_id"
+                    style="@style/MyEditTextTitle"
+                    />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SpinnerTheme"
+                    android:id="@+id/relation_secondary"/>
+
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyEditTextTitle"
+                    android:textColor="@color/errorColor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/secondary_spinner_error_tv"
+                    android:visibility="gone"
+
+                    />
+
+
+                <!--secondary id old-->
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_secondary_id"
+                    style="@style/MyEditTextTitle"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_secondary_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:visibility="gone"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <com.tailwebs.aadharindia.utils.custom.BetterSpinner
+                        android:id="@+id/input_secondary_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--secondary id-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/secondaryLayout"
+
+                    >
+
+
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/secondary_grid"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:layout_marginTop="12dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:visibility="gone"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    android:id="@+id/secondary_dummy_id_image"
+                    android:src="@drawable/add_photos_multiple"
+                    />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/secondary_id_status_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+                <!--other loan cards-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_other_loan_cards"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/otherLoanCardLayout"
+
+                    >
+
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/other_loan_grid"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/others_status_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+                <!--other documents-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_other_documents"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/otherDocumentsLayout"
+
+                    >
+
+
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/other_documents_grid"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/others_documents_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+                <!--address proof-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_address_proof"
+                    style="@style/MyEditTextTitle"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressProofLayout"
+
+                    >
+
+                <com.tailwebs.aadharindia.utils.custom.newmultipleimageupload.view.ImageGridView
+                    android:id="@+id/address_proof_grid"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80dp"
+                    android:horizontalSpacing="10dp"
+                    apps:showDeleteDialog="true"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    apps:deleteDrawable="@drawable/ic_image_delete_icon"
+                    android:verticalSpacing="10dp"
+                    apps:imagePlaceholderDrawable="@drawable/img_placeholder"
+                    apps:showDeleteButton="true"
+                    apps:showDeleteText="true"
+                    apps:showAddButton="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyBlueTextView"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/address_proof_tv"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:text="@string/action_continue"
+                android:layout_marginBottom="48dp"
+                style="@style/MyBlueButton"
+
+
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

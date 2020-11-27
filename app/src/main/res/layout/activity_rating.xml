@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.rating.RatingActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_rate_this_customer"
+                style="@style/MyHeadingTextView"
+                android:id="@+id/text_heading"
+                android:layout_marginBottom="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_heading"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_how_would_you_like"
+                        style="@style/MyEditTextTitle"
+                        />
+
+                    <com.tailwebs.aadharindia.member.rating.SwitchMultiButton
+                        android:id="@+id/rate_switch_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="14dp"
+                        android:padding="8dp"
+                        app:selectedColor="#195bc1"
+                        app:strokeRadius="5dp"
+                        app:strokeWidth="1dp"
+                        app:switchTabs="@array/switch_tabs"
+                        app:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:text="@string/action_finish"
+                style="@style/MyBlueButton"
+
+
+                />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+</LinearLayout>

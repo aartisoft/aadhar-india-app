@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.cashincome.MemberInformationActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_padding"
+                    >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_name"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_age"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            android:maxLines="1"
+                            android:inputType="numberSigned"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--relation with applicant-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:text="@string/hint_relation_with_applicant"
+                        style="@style/MyEditTextTitle"
+                        />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SpinnerTheme"
+                        android:layout_marginBottom="12dp"
+                        android:id="@+id/relation_with_applicant_spinner"/>
+
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/relation_with_applicant_spinner_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <!--relation old hide-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_relation_with_applicant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:hint="@string/hint_relationship_with_applicant"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <com.tailwebs.aadharindia.utils.custom.BetterSpinner
+                            android:id="@+id/input_relation_with_applicant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_relation_with_applicant_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_relation"
+                        android:visibility="gone"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_relation_with_applicant_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_health"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        />
+
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/health_toggle_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/health_status_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_is_person_studying"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="36dp"
+                            android:id="@+id/study_yes_tv"
+                            android:layout_marginRight="24dp"
+                            android:text="@string/hint_yes"
+                            android:gravity="center"
+                            style="@style/MyRadioNotSelected"
+                            />
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="36dp"
+                            android:id="@+id/study_no_tv"
+                            android:text="@string/hint_no"
+                            android:gravity="center"
+                            style="@style/MyRadioNotSelected"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/study_status_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/education_layout"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_education"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="@dimen/form_margin_top"
+                            />
+                        <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                            android:id="@+id/education_level_toggle_radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:tbgRowSpacing="16dp"
+                            app:tbgChildSpacing="16dp">
+                        </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditTextTitle"
+                            android:textColor="@color/errorColor"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="12dp"
+                            android:id="@+id/education_level_status_error_tv"
+                            android:visibility="gone"
+
+                            />
+                        <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                            android:id="@+id/education_toggle_radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:tbgRowSpacing="16dp"
+                            app:tbgChildSpacing="16dp">
+                        </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditTextTitle"
+                            android:textColor="@color/errorColor"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="12dp"
+                            android:id="@+id/education_status_error_tv"
+                            android:visibility="gone"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hint_type_of_school"
+                            android:id="@+id/typeOfSchoolHeading"
+                            style="@style/MyEditTextTitle"
+                            android:layout_marginTop="@dimen/form_margin_top"
+                            />
+                        <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                            android:id="@+id/type_of_school_toggle_radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:tbgRowSpacing="16dp"
+                            app:tbgChildSpacing="16dp">
+                        </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditTextTitle"
+                            android:textColor="@color/errorColor"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="12dp"
+                            android:id="@+id/type_of_school_status_error_tv"
+                            android:visibility="gone"
+
+                            />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_class"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true"
+                            android:hint="@string/hint_class"
+                            android:layout_marginTop="@dimen/form_margin_top"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_class"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:inputType="text"
+                                android:imeOptions="actionDone"
+                                style="@style/MyEditText"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_does_member_have_income"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="36dp"
+                            android:id="@+id/income_yes_tv"
+                            android:layout_marginRight="24dp"
+                            android:text="@string/hint_yes"
+                            android:gravity="center"
+                            style="@style/MyRadioNotSelected"
+                            />
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="36dp"
+                            android:id="@+id/income_no_tv"
+                            android:text="@string/hint_no"
+                            android:gravity="center"
+                            style="@style/MyRadioNotSelected"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/income_status_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/duplicating_layout"
+                       android:visibility="gone"
+
+                        >
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyBlueTextView"
+                           android:visibility="gone"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="@dimen/margin_padding"
+                            android:id="@+id/add_job_tv"
+                            android:text="@string/hint_add_secondary_job"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/add_member_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:text="@string/hint_add_member"
+                    android:layout_marginBottom="48dp"
+                    style="@style/MyBlueButton"
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

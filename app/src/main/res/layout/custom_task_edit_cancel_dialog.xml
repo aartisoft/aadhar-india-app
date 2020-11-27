@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="@dimen/margin_padding"
+    android:paddingRight="@dimen/margin_padding"
+    android:id="@+id/custom_password_dialog_layout"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyFormHeadingTextView"
+        android:text="Would you like to"
+        android:id="@+id/amount_tv"
+
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="Add/Edit Notes"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/remove_member"
+        android:id="@+id/add_edit_tv"
+        style="@style/MyBluePopUpText"
+        />
+
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/negative_complete_tv"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/remove_member"
+        android:text="Negative Complete Task"
+        style="@style/MyBluePopUpText"
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/complete_tv"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/remove_member"
+        android:text="Complete Task"
+        style="@style/MyBluePopUpText"
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_tv"
+        android:gravity="center_vertical"
+        android:drawablePadding="12dp"
+        android:drawableLeft="@drawable/remove_member"
+        android:text="Cancel Task"
+        style="@style/MyBluePopUpText"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

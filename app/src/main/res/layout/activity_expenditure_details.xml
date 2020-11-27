@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.expenditure.ExpenditureDetailsActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_bg"
+            android:layout_margin="24dp"
+
+            >
+
+            <ImageView
+                android:layout_width="@dimen/profile_image_height"
+                android:layout_height="@dimen/profile_image_height"
+                android:layout_gravity="center"
+                android:src="@drawable/userimg_placeholder"
+                android:id="@+id/profile_image"
+                android:layout_marginTop="12dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/MyFormHeadingTextView"
+                android:id="@+id/user_name"
+                android:layout_marginTop="12dp"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MyFormHeadingMessageTextView"
+                android:layout_gravity="center"
+                android:id="@+id/user_co"
+
+
+                />
+
+
+            <include layout="@layout/common_divider_view">
+            </include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/family_expenditure_tv"
+                    android:text="@string/hint_family_expenditure"
+                    android:enabled="false"
+                    style="@style/MyDisabledFormHeadingTextView"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/common_divider_view">
+            </include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/outside_borrowing_tv"
+                    android:text="@string/hint_outside_borrowing"
+                    android:enabled="false"
+                    style="@style/MyDisabledFormHeadingTextView"
+
+                    />
+
+            </RelativeLayout>
+
+            <include layout="@layout/common_divider_view">
+            </include>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"></FrameLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            style="@style/MyBlueButton"
+            android:id="@+id/continue_button"
+            android:text="@string/action_continue"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

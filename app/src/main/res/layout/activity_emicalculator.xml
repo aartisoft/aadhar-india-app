@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.applicant.EMICalculatorActivity">
+
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+            <!--//success box-->
+
+            <LinearLayout
+
+               android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/success_message_box_layout"
+                android:background="@drawable/success_box_bg"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/repeat_customer_tv"
+                    android:gravity="center"
+                    style="@style/MyFormHeadingTextView"
+                    android:drawableLeft="@drawable/success_circle"
+                    android:drawablePadding="8dp"
+                    android:text="@string/hint_repeat_customer"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/hint_loan_cycle"
+                    android:id="@+id/loan_cycle_tv"
+                    style="@style/MyEditTextTitle"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fresh_message_box_layout"
+                android:background="@drawable/blue_box_bg"
+                android:layout_marginBottom="@dimen/margin_padding"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fresh_customer_tv"
+                    android:gravity="center"
+                    style="@style/MyFormHeadingTextView"
+                    android:drawableLeft="@drawable/blue_circle"
+                    android:drawablePadding="8dp"
+                    android:text="Fresh Customer"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/hint_loan_cycle"
+                    android:id="@+id/fresh_loan_cycle_tv"
+                    style="@style/MyEditTextTitle"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/hint_loan_amount"
+                    style="@style/MyEditTextTitle"
+                    />
+
+
+                <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                    android:id="@+id/loan_amount_toggle_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:tbgRowSpacing="16dp"
+                    app:tbgChildSpacing="16dp">
+                </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/hint_loan_tenure"
+                    style="@style/MyEditTextTitle"
+                    />
+
+
+                <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                    android:id="@+id/loan_tenure_toggle_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:tbgRowSpacing="16dp"
+                    app:tbgChildSpacing="16dp">
+                </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/blue_bordered_box_bg"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/hint_approx_emi_amount"
+                        style="@style/MyEditTextTitle"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/MyBigBlueTextView"
+                        android:text="Rs. 0"
+                        android:id="@+id/emi_amount_tv"
+
+                        />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:id="@+id/apply_loan_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:text="@string/action_apply_loan"
+                android:layout_marginBottom="48dp"
+                android:enabled="false"
+                style="@style/MyDisabledButton"
+
+
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

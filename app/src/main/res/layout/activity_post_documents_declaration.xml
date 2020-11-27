@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".postapproval.PostDocumentsDeclarationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/custom_action_bar"
+            android:id="@+id/action_bar_layout"
+            >
+
+        </include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_bg"
+            android:layout_margin="24dp"
+            android:padding="24dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MyFormHeadingTextView"
+                android:id="@+id/user_name"
+                android:text="@string/hint_declaration"
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MyFormHeadingTextView"
+                android:id="@+id/declaration_tv"
+              android:layout_marginTop="12dp"
+                android:paddingBottom="12dp"
+                android:textSize="14sp"
+                >
+
+            </TextView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bordered_bg"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/loan_agreement_tv"
+                    style="@style/MyFormHeadingTextView"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <include layout="@layout/common_divider_view"
+                android:visibility="gone"
+                >
+            </include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/sanction_letter_tv"
+                    android:text="@string/hint_sanction_letter"
+                    style="@style/MyFormHeadingTextView"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <include layout="@layout/common_divider_view"
+                android:visibility="gone">
+            </include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:visibility="gone"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/radio_button_on"
+                    android:layout_alignParentRight="true"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="35dp"
+                    android:layout_gravity="left"
+                    android:id="@+id/guarantors_tv"
+                    android:text="@string/hint_guarantors"
+                    style="@style/MyFormHeadingTextView"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/common_divider_view"
+                android:visibility="gone">
+            </include>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/digio_layout"
+            android:visibility="invisible"
+            android:layout_below="@id/user_layout"
+            android:background="@drawable/bordered_bg"
+            android:layout_margin="24dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/group_documents_layout"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/applicant_signature_tv"
+                        android:text="@string/hint_applicant_signature"
+                        style="@style/MyFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/common_divider_view">
+            </include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/individual_documents_layout"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/co_applicant_signature_tv"
+                        android:text="@string/hint_co_applicant_signature"
+                        style="@style/MyFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <include layout="@layout/common_divider_view">
+            </include>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/manual_layout"
+            android:visibility="invisible"
+            android:layout_below="@id/user_layout"
+            android:background="@drawable/bordered_bg"
+            android:layout_margin="24dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/group_documents_layout_m"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/applicant_signature_tv_m"
+                        android:text="@string/hint_applicant_signature_m"
+                        style="@style/MyFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/common_divider_view">
+            </include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/individual_documents_layout_m"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/co_applicant_signature_tv_m"
+                        android:text="@string/hint_co_applicant_signature_m"
+                        style="@style/MyFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <include layout="@layout/common_divider_view">
+            </include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:id="@+id/loan_agreement_layout_m"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_on"
+                        android:layout_alignParentRight="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/loan_agreement_tv_m"
+                        android:text="@string/hint_co_applicant_signature_m"
+                        style="@style/MyFormHeadingTextView"
+
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <include layout="@layout/common_divider_view">
+            </include>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                style="@style/MyBlueButton"
+                android:visibility="gone"
+                android:id="@+id/esign_cpf_button"
+                android:text="@string/action_continue"
+                />
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

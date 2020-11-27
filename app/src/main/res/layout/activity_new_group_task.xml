@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.NewGroupTaskActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+
+                <!--task-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_task"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:enabled="false"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--name optional-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:hint="@string/hint_name_optional"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="32"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:maxLength="32"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--location-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_location"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:baselineAligned="false"
+                    app:errorEnabled="true"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/input_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--date-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_date"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_date"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--notes-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:hint="@string/hint_notes"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="140"
+                    android:singleLine="false"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="4"
+                        android:minLines="3"
+                        android:singleLine="false"
+                        android:maxLength="140"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="10dp"
+                android:layout_alignParentBottom="true"
+                >
+
+                <Button
+                    android:id="@+id/save_task_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/margin_padding"
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:text="@string/action_save_task"
+                    style="@style/MyBlueButton"
+
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

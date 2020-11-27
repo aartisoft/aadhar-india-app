@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".member.coapplicant.CoApplicantActivity">
+
+    <include layout="@layout/custom_action_bar"
+        android:id="@+id/action_bar_layout"
+        >
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_padding"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+
+                <!--relation with applicant-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:text="@string/hint_relation_with_applicant"
+                    style="@style/MyEditTextTitle"
+                    />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SpinnerTheme"
+                    android:layout_marginBottom="12dp"
+                    android:id="@+id/relation_with_applicant_spinner"/>
+
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyEditTextTitle"
+                    android:textColor="@color/errorColor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/relation_with_applicant_spinner_error_tv"
+                    android:visibility="gone"
+
+                    />
+
+
+
+                <!--relation with applicant old-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_relation_with_applicant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:errorEnabled="true"
+                    android:visibility="gone"
+                    android:hint="@string/hint_relation_with_applicant"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <com.tailwebs.aadharindia.utils.custom.BetterSpinner
+                        android:id="@+id/input_relation_with_applicant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_relation_with_applicant_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_relation"
+                    android:visibility="gone"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_relation_with_applicant_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_aadhar_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_aadhar_number"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_aadhar_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            android:enabled="false"
+                            android:inputType="numberSigned"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="44dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/scan_aadhar_img"
+                        android:src="@drawable/check_circle_24_px_copy_3"
+                        />
+
+                </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_contact_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_name"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_contact_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/hint_dob"
+                        style="@style/MyEditTextTitle"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3.5">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_day"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:drawableRight="@drawable/arrow_drop_down"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_day"
+                            android:layout_marginRight="8dp"
+                            style="@style/MyEditText" />
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_month"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:drawableRight="@drawable/arrow_drop_down"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:hint="@string/hint_month"
+                            style="@style/MyEditText" />
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_year"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:drawableRight="@drawable/arrow_drop_down"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_year"
+                            style="@style/MyEditText" />
+
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/dob_error_tv"
+                        android:visibility="gone"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_gender"
+                        style="@style/MyEditTextTitle"
+                        />
+
+                    <com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup
+                        android:id="@+id/gender_group_single_radiobutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:tbgRowSpacing="16dp"
+                        app:tbgChildSpacing="16dp">
+                    </com.tailwebs.aadharindia.utils.custom.singleselecttoggle.SingleSelectToggleGroup>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditTextTitle"
+                        android:textColor="@color/errorColor"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/gender_error_tv"
+                        android:visibility="gone"
+
+                        />
+                </LinearLayout>
+
+
+                <!--aadhar co-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_aadhar_co"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_aadhar_co"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_aadhar_co"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--relation-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:text="@string/hint_relation_as_on_aadhar"
+                    style="@style/MyEditTextTitle"
+                    />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="@style/SpinnerTheme"
+                    android:id="@+id/relation_spinner"/>
+
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    style="@style/MyEditTextTitle"
+                    android:textColor="@color/errorColor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="12dp"
+                    android:id="@+id/relation_spinner_error_tv"
+                    android:visibility="gone"
+
+                    />
+
+
+                <!--relation old-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_aadhar_co_relation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_relation"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:visibility="gone"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <com.tailwebs.aadharindia.utils.custom.BetterSpinner
+                        android:id="@+id/input_aadhar_co_relation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_relation_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_relation"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_relation_others"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_primary_number"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/pre_mobile"
+                            style="@style/MyEditTextTitle"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/pre_mobile"
+                            android:textSize="16sp"
+                            android:layout_marginRight="4dp"
+                            android:layout_alignParentLeft="true"
+
+                            />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_toRightOf="@+id/pre_mobile"
+                            android:id="@+id/input_layout_primary_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:errorEnabled="true"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            >
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_primary_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/MyEditText"
+                                android:imeOptions="actionDone"
+                                android:maxLength="10"
+                                android:inputType="numberSigned"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_secondary_number"
+                        style="@style/MyEditTextTitle"
+
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/pre_mobile"
+                            style="@style/MyEditTextTitle"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/sec_pre_mobile"
+                            android:textSize="16sp"
+                            android:layout_marginRight="4dp"
+                            android:layout_alignParentLeft="true"
+
+                            />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_toRightOf="@+id/sec_pre_mobile"
+                            android:id="@+id/input_layout_secondary_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:errorEnabled="true"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            >
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_secondary_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/MyEditText"
+                                android:imeOptions="actionDone"
+                                android:maxLength="10"
+                                android:inputType="numberSigned"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--address line 1-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_address_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:hint="@string/hint_address_line_1"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="false"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="220"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_address_line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:minLines="4"
+                        android:maxLines="9"
+                        android:maxLength="220"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:inputType="textMultiLine"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--&lt;!&ndash;address line 1&ndash;&gt;-->
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:id="@+id/input_layout_address_line1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:errorEnabled="true"-->
+                    <!--android:hint="@string/hint_address_line_1"-->
+                    <!--android:layout_marginTop="@dimen/form_margin_top"-->
+                    <!--app:errorTextAppearance="@style/errorEditTextAppearance"-->
+                    <!--app:helperTextEnabled="true"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:baselineAligned="false">-->
+
+                    <!--<android.support.design.widget.TextInputEditText-->
+                        <!--android:id="@+id/input_address_line1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:inputType="text"-->
+                        <!--style="@style/MyEditText"-->
+                        <!--/>-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <!--address line 2-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_address_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_address_line_2"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_address_line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_city"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:baselineAligned="false"
+                    app:errorEnabled="true"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/input_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <!--/>-->
+
+                <!--district-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_district"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/hint_district"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    app:errorTextAppearance="@style/errorEditTextAppearance"
+                    app:helperTextEnabled="true"
+                    android:singleLine="true"
+                    android:baselineAligned="false">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/input_district"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/MyEditText"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--pincode and state-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/form_margin_top"
+                    android:weightSum="2"
+                    >
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_pin_code"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_padding"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_pin_code"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_pin_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            android:maxLength="6"
+                            android:inputType="numberSigned"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_state"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_state"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_current_address"
+                style="@style/MyHeadingTextView"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:layout_marginBottom="8dp"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordered_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_padding"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bordered_bg"
+                    android:id="@+id/alternate_layout"
+
+                    >
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/alternate_address_check_box"
+                        android:layout_centerVertical="true"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/alternate_address_check_box"
+                        android:id="@+id/alternate_check_box_tv"
+                        style="@style/MyEditTextTitle"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/hint_alternate_address"
+                        />
+
+
+
+                </RelativeLayout>
+
+                <!--alternate address-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/alternate_address_layout"
+                    >
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_alternate_address_line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:hint="@string/hint_address_line_1"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="false"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="220"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_alternate_address_line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:minLines="4"
+                            android:maxLines="9"
+                            android:maxLength="220"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:inputType="textMultiLine"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+                        <!--android:id="@+id/input_layout_alternate_address_line1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--app:errorEnabled="true"-->
+                        <!--android:layout_marginTop="@dimen/form_margin_top"-->
+                        <!--android:hint="@string/hint_address_line_1"-->
+                        <!--app:errorTextAppearance="@style/errorEditTextAppearance"-->
+                        <!--app:helperTextEnabled="true"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:baselineAligned="false">-->
+
+                        <!--<android.support.design.widget.TextInputEditText-->
+                            <!--android:id="@+id/input_alternate_address_line1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:inputType="text"-->
+                            <!--style="@style/MyEditText"-->
+                            <!--/>-->
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_alternate_address_line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:hint="@string/hint_address_line_2"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:visibility="gone"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_alternate_address_line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_alternate_city_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        android:hint="@string/hint_city"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:baselineAligned="false"
+                        app:errorEnabled="true"
+                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/input_alternate_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            android:singleLine="true"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--<TextView-->
+                    <!--android:layout_width="300dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--style="@style/MyEditTextTitle"-->
+                    <!--android:textColor="@color/errorColor"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!--android:id="@+id/city_alternate_error_tv"-->
+                    <!--android:visibility="gone"-->
+
+                    <!--/>-->
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_alternate_district"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        android:hint="@string/hint_district"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        app:errorTextAppearance="@style/errorEditTextAppearance"
+                        app:helperTextEnabled="true"
+                        android:singleLine="true"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/input_alternate_district"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/MyEditText"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="@dimen/form_margin_top"
+                        >
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_alternate_pin_code"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_padding"
+                            app:errorEnabled="true"
+                            android:hint="@string/hint_pin_code"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_alternate_pin_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/MyEditText"
+                                android:maxLength="6"
+                                android:inputType="numberSigned"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_layout_alternate_state"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            app:errorEnabled="true"
+                            android:hint="@string/hint_state"
+                            app:errorTextAppearance="@style/errorEditTextAppearance"
+                            app:helperTextEnabled="true"
+                            android:singleLine="true"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/input_alternate_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                style="@style/MyEditText"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/margin_padding"
+                android:text="@string/action_continue"
+                android:layout_marginBottom="48dp"
+                style="@style/MyBlueButton"
+
+
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
